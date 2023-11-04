@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-
+import SingleDetailsContainer from './components/SingleDetailsContainer';
+import TotalValue from './components/TotalValue';
+// import SingleDetails from './components/SingleDetails.js';
+// import data from './assets/data.js';
+//const {target,act,growth,gap,margin,dist,budget,budgetPercent} = data;
 function App() {
+  const year = [2020,2021,2022,2023]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      {/* {data.map((item,index)=>{
+        return <SingleDetails key={index} data={item}/>
+      })} */}
+      
+  <div class="first">
+  <div class="second">
+    <div></div>
+  </div>
+  <div class="scroll-grand">
+    <div class="scroll-parent">
+       <div class="scroll">
+        {year.map((item,index)=>{
+        return <SingleDetailsContainer key={index} />
+      })}
+        </div>
+  </div>
+ </div>
+ <div class="third">
+    <TotalValue/>
+  </div>
+  </div>
+</div>
   );
 }
 
