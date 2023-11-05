@@ -15,7 +15,12 @@ body {
   padding:0;
   box-sizing: border-box;
 }
-
+:root{
+  --primaryTextColor:#87919e;
+  --lightBlueColor:#90bdf9;
+  --darkerBackground:#16191d;
+  --backcomponent:#282d32;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -52,20 +57,65 @@ code {
 .scroll-parent{
   width:850px;
 }
-.second div{
-  width:250px;
+/*---------------------first sales section start------------------------*/
+.sales-section{
+  width:200px;
   height:400px;
   border:1px solid black;
   /* border-right-width:0px; */
-  background-color:red;
-}
-.third div{
-  width:250px;
-  height:450px;
-  /* border:1px solid black; */
-  /* border-right-width:0px; */
   /* background-color:red; */
 }
+.saleSection-div{
+  display: flex;
+  align-items: center ;
+  background-color: #282d32;
+  padding: 6px 12px;
+  padding-left: 14px;
+  margin-bottom: 6px;
+  color:#fff;
+  font-size: 15px;
+}
+.saleSection-div-head {
+  display: flex;
+  text-transform: uppercase;
+  color: #87919e;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+  /* padding: 16px 12px; */
+  padding-left: 16px;
+  margin-top: 1rem;
+  height: 86px;
+  align-items: end;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+.saleSection-div-head-icon{
+  margin-right: 10px;
+  position: relative;
+  top:2px;
+  color: var(--lightBlueColor);
+}
+.saleSection-div-icon{
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  
+}
+/* .singleDetails-header p {
+  color: #87919e;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 16px 12px;
+  padding-left: 16px;
+} */
+/* .third div{
+  width:250px;
+  height:450px;
+ 
+} */
+/*---------------------first sales section end------------------------*/
 .first{
   display:flex;
   overflow-x:auto;
@@ -89,6 +139,7 @@ code {
   position: absolute;
   top:50%;
   transform: translateY(-50%);
+  right: 0;
 }
 .singleDetails-header p{
   color:#87919e;
@@ -100,6 +151,7 @@ code {
 }
 
 .singleDetails-header-year{
+  /* margin-top: 1rem; */
   background-color: #16191d;
   /* position: relative; */
   border-right: 1px solid #000;
@@ -116,10 +168,199 @@ code {
   font-size: 12px;
   font-weight: bold;
 }
-.setTargetLastDivParent{
+.setTargetLastDivParent {
   display: flex;
   justify-content: space-between;
+  width: 300px;
+  background-color: #16191d;
+  padding: 9px 10px;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 11px;
+}
+.singleDetails-header-height{
+  height: 86px;
+  margin-top: 1rem;
 }
 .setTargetLastDiv{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.setTargetLastDiv p{
+  color:var(--lightBlueColor);
+  margin-right: 1rem;
+  font-weight: 400;
+}
+.setTargetLastDiv p svg {
+  color: var(--primaryTextColor);
+  /* font-size: 19px; */
+  vertical-align: bottom;
+  margin-left: 4px;
+}
+.setTargetFirstDiv p span:nth-child(1){
+  color:var(--primaryTextColor);
+}
+
+/*====================Total Value header=========================*/
+.setTargetLastDivParent-width{
+  height: 86px;
+  margin-top: 1rem;
+}
+.totalValue-header {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 6px;
+  color: var(--primaryTextColor);
+  text-decoration: capitalize;
+}
+
+.totalValue-header p {
+  color: #87919e;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 16px 13px;
+  /* padding-left: 16px; */
+}
+.totalValue-header div:nth-child(1) p{
+  color:var(--lightBlueColor);
+}
+
+.totalValueSingle.singleDetails {
+  width: 300px!important;
+  color: #fff;
+  padding: 4px 12px;
+  padding-right: 5px;
+}
+.totalValueSingle.singleDetails div{
+  padding:2px 5px;
+  background-color: var(--darkerBackground);
+  min-width: 47px;
+}
+.totalValueSingle.singleDetails div p{
+  text-align: center;
+}
+.totalValueSingle .budjectPercent {
+  font-size: 10px;
+  background-color: #323941;
+  border-radius: 8px;
+  padding: 0px 5px;
+  padding-top: 3px;
+  display: inline-block;
+  height: 19px;
+}
+.totalValueSingle .singleDetailsBudget{
+  display: flex;
+}
+.totalValueSingle .singleDetailsBudget p{
+  margin-right: 6px;
+}
+
+.totalValueSingleTarget{
+  background-color: #0c6ce9!important;
+}
+.totalValueSingleTarget:hover{
+
+}
+/*------------------------productGroup-single start--------------------------*/
+.productGroup-single {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  margin-top: 10px;
+}
+.productGroup-single:hover{
+  border:1px solid #0c6ce9;
+}
+.second{
+  display: flex;
+}
+.second .productGroup{
+  width: 300px;
+  color: #d6dfe9;
+}
+.productGroup-single-first{
+  display: flex;
+  align-items: center;
+}
+.productGroup-single-first svg{
+  position: relative;
+  top: 2px;
+}
+.productGroup-single-first-icon1{
+  font-size: 13px;
+}
+.productGroup-single-first-icon1{
+  font-size: 13px;
+}
+.productGroup-single-first-icon2{
+  font-size: 20px;
+  margin-right: 4px;
+}
+.productGroup-single-second{
+  display: flex;
+  align-items: center;
+}
+.productGroup-single-second svg{
+  margin-right: 6px;
+  font-size: 12px;
+  color: #0c6ce9;
+}
+.search-div input{
+  padding: 11px 7px;
+  background-color: var(--backcomponent);
+  border: none;
+  overflow: hidden;
+  color:#fff;
+}
+.search-div input::placeholder{
+  color:#748090;
+}
+.search-div input:focus{
+  border: none;
+  outline: none;
+}
+.search-div {
+  display: flex;
+  align-items: center;
+  background-color: var(--backcomponent);
+  margin: 0 1rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: 10px;
+}
+.search-div svg{
+  color:#748090;
+  font-size: 19px;
+}
+.productTab{
+  display: flex;
+  justify-content: space-between;
+  color:#d6dfe9;
+  border-bottom: 1px solid var(--primaryTextColor);
+  position: relative;
+}
+.productTabColor{
+  padding: 1rem 2rem;
+  padding-bottom: 10px;
+  border-bottom:2px solid #0c6ce9;
+  position: relative;
+  bottom: -1px;
+}
+.productGroup-header-div{
+  height:86px;
+  margin-top: 1rem;
+}
+/* .productTab div::after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 10px;
+  height: 2px;
+  background-color: #0c6ce9;
+
+} */
+/*------------------------productGroup-single end--------------------------*/

@@ -1,4 +1,6 @@
 import './App.css';
+import SalesSection from './components/SalesSection';
+import ProductGroup from './components/ProductGroup';
 import SingleDetailsContainer from './components/SingleDetailsContainer';
 import TotalValue from './components/TotalValue';
 // import SingleDetails from './components/SingleDetails.js';
@@ -14,13 +16,14 @@ function App() {
       
   <div class="first">
   <div class="second">
-    <div></div>
+    <ProductGroup/>
+    <SalesSection/>
   </div>
   <div class="scroll-grand">
     <div class="scroll-parent">
        <div class="scroll">
         {year.map((item,index)=>{
-        return <SingleDetailsContainer key={index} />
+        return <SingleDetailsContainer key={index} yearCount={index}/>
       })}
         </div>
   </div>
