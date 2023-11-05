@@ -1,13 +1,24 @@
-import React from "react";
-import { BiCaretRight } from "react-icons/bi";
-import { TbArrowBadgeRightFilled } from "react-icons/tb";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { AiFillStar } from "react-icons/ai";
-import { productGroup } from "../assets/data";
+import {BsArrowLeft,BsArrowRight} from "react-icons/bs";
+import { productGroup,productGroup1 } from "../assets/data";
+import ProductGroupList from "./ProductGroupList";
+import ProductGroupHeader from "./ProductGroupHeader";
 function ProductGroup() {
-  console.log(productGroup);
+    const [tabChange,setTabCange] = useState(true);
+    const [collapseBar,setCollapseBar] = useState(true);
+    function handleCollapse(){
+        setCollapseBar(prev=>!prev);
+    }
+    function changeTab(){
+        setTabCange(prev=>!prev);
+    }
   return (
-    <div>
+    <div className={!collapseBar?"productGroup-toggle productFormate":"productFormate"}>
+    <div className="productGroupHeader-height">
+    <div class="productArrow" onClick={handleCollapse}><span>{collapseBar?<BsArrowLeft/>:<BsArrowRight/>}</span></div>
+      <ProductGroupHeader/>
+    </div>
       <div className="productGroup-header-div">
         <div className="productGroup-header">
           <div className="search-div">
@@ -18,39 +29,17 @@ function ProductGroup() {
           </div>
         </div>
         <div className="productTab">
-          <div className="productTabColor">
+          <div className={tabChange?"productTabColor":null} onClick={changeTab}>
             <p>Product Structure</p>
           </div>
-          <div>
+          <div className={!tabChange?"productTabColor":null} onClick={changeTab}>
             <p>Brand</p>
           </div>
         </div>
       </div>
       <div className="productGroup">
         <ul>
-          {productGroup.map((item, index) => {
-            return (
-              <li key={index}>
-                <div className="productGroup-single">
-                  <div className="productGroup-single-first">
-                    <div className="productGroup-single-first-icon1">
-                      <BiCaretRight />
-                    </div>
-                    <div className="productGroup-single-first-icon2">
-                      <TbArrowBadgeRightFilled />
-                    </div>
-                    <div>
-                      <p>{item.product}</p>
-                    </div>
-                  </div>
-                  <div className="productGroup-single-second">
-                    <AiFillStar />
-                    <p>{item.productVal}</p>
-                  </div>
-                </div>
-              </li>
-            );
-          })}
+          {tabChange?<ProductGroupList productGroup={productGroup}/>:<ProductGroupList productGroup={productGroup1}/>}
         </ul>
       </div>
     </div>

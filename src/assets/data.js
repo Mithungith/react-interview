@@ -206,5 +206,17 @@ const productGroup = [
   { product: "Product Group I", productVal: 66.48 },
   { product: "Product Group J ", productVal: 66.48 },
 ];
+const productGroup1 = [
+  { product: "Product Group A", productVal: 50.48 },
+  { product: "Product Group B", productVal: 50.48 },
+  { product: "Product Group C ", productVal: 50.48 },
+  { product: "Product Group D", productVal: 50.48 },
+  { product: "Product Group E", productVal: 50.48 },
+  { product: "Product Group F", productVal: 50.48 },
+  { product: "Product Group G", productVal: 50.48 },
+  { product: "Product Group H", productVal: 50.48 },
+  { product: "Product Group I", productVal: 50.48 },
+  { product: "Product Group J ", productVal: 50.48 },
+];
 
-export { data, dataName, targetData, productGroup };
+export { data, dataName, targetData, productGroup,productGroup1 };

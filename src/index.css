@@ -60,8 +60,8 @@ code {
 /*---------------------first sales section start------------------------*/
 .sales-section{
   width:200px;
-  height:400px;
-  border:1px solid black;
+  border-right: 1px solid #ffffff4a;
+  /* border:1px solid black; */
   /* border-right-width:0px; */
   /* background-color:red; */
 }
@@ -84,8 +84,8 @@ code {
   text-transform: capitalize;
   /* padding: 16px 12px; */
   padding-left: 16px;
-  margin-top: 1rem;
-  height: 86px;
+  padding-top: 1rem;
+  height: 102px;
   align-items: end;
   padding-bottom: 1rem;
   font-weight: 600;
@@ -178,9 +178,10 @@ code {
   font-size: 14px;
   margin: 0 11px;
 }
-.singleDetails-header-height{
-  height: 86px;
-  margin-top: 1rem;
+.singleDetails-header-height {
+  height: 102px;
+  /* margin-top: 1rem; */
+  padding-top: 1rem;
 }
 .setTargetLastDiv{
   display: flex;
@@ -262,7 +263,7 @@ code {
   background-color: #0c6ce9!important;
 }
 .totalValueSingleTarget:hover{
-
+  background-color: skyblue;
 }
 /*------------------------productGroup-single start--------------------------*/
 .productGroup-single {
@@ -341,17 +342,29 @@ code {
   color:#d6dfe9;
   border-bottom: 1px solid var(--primaryTextColor);
   position: relative;
+  align-items: center;
 }
-.productTabColor{
+.productTab div{
   padding: 1rem 2rem;
   padding-bottom: 10px;
+  cursor: pointer;
+}
+.productTabColor{
   border-bottom:2px solid #0c6ce9;
   position: relative;
   bottom: -1px;
 }
-.productGroup-header-div{
-  height:86px;
+.productGroup-header-div {
+  height: 102px;
+  /* margin-top: 1rem; */
+  border-top: 1px solid #ffffff4a;
+  padding-top: 1rem;
+}
+.productGroup ul {
   margin-top: 1rem;
+}
+.productGroupHeader-height{
+  height:85px;
 }
 /* .productTab div::after{
   content:"";
@@ -364,3 +377,115 @@ code {
 
 } */
 /*------------------------productGroup-single end--------------------------*/
+/*------------------------productGroup header start--------------------------*/
+.productGroupHeader-div{
+  margin: 1rem 0;
+}
+.productGroupHeader {
+  display: flex;
+  justify-content: space-between;
+  margin:20px 20px;
+}
+.productGroupHeader button{
+  background-color: transparent;
+  border: none;
+  color:#87919e;
+}
+.productArrow{
+  text-align: right;
+  color: #87919e;
+  font-size: 30px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.productGroup-toggle{
+  width:60px!important;
+  overflow: hidden;
+  position: relative;
+}
+.productGroup-toggle::before{
+  position: absolute;
+  content: "";
+  inset: 0;
+  top: 6%;
+  background-color: #1e2225;
+  z-index: 10;
+}
+.productFormate {
+  border-right: 4px solid #000;
+}
+/*------------------------productGroup header end--------------------------*/
+/*------------------------TopHead start--------------------------*/
+.topheader {
+  display: flex;
+  color: #fff;
+  height: 85px;
+}
+.topheader1 {
+  width: 200px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.topheader2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 14px;
+}
+.topheader2a{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.topheader2b{
+  display: flex;
+  align-items: center;
+}
+.topheader2a svg{
+  position: relative;
+  top: 2px;
+  margin: 0 5px;
+  color: var(--primaryTextColor);
+}
+.togglePage {
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #6d7887;
+  position: relative;
+  margin-left: 10px;
+  top: 3px;
+}
+.togglePage::before{
+  position: absolute;
+  content:"";
+  left:0;
+  top:1px;
+  bottom: 1px;
+  border-radius: 50%;
+  width:18px;
+  background-color: #fff;
+}
+.topheader2b-toggle{
+  display: flex;
+  margin: 0 10px;
+}
+.advanceFilter{
+  border-radius: 5px;
+  border: 2px solid #2f363d;
+  padding: 10px;
+  margin: 0 6px;
+  background-color: var(--darkerBackground);
+}
+.compareYears{
+  border-radius: 5px;
+  border: 2px solid #2f363d;
+  padding: 10px;
+  margin: 0 6px;
+  background-color: var(--darkerBackground);
+}
+/*------------------------TopHead end--------------------------*/
