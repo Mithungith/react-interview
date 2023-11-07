@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useEffect,useState,} from "react";
 import "../index.css";
 function SingleDetails({ data }) {
   const { target, act, growth, gap, margin, dist, budget, budgetPercent } =
     data;
+  // const {id} = apiData[0];
   const color = {
     negative: "#f59994",
     positive: "#12d965",

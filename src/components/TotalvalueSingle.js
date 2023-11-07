@@ -3,14 +3,13 @@ import {targetData} from "../assets/data"
 
 function TotalvalueSingle({targetData}) {
     const { target, growth, margin, dist, budget,  budgetChange } = targetData;
-    console.log(targetData,"target");
     const colorValue = {
         negative: "#f59994",
         positive: "#12d965",
     }
 
   return (
-    <div className="singleDetails-div">
+    <div className={target ==="+"?"singleDetails-div opacitySingle":"singleDetails-div"}>
       <div className="totalValueSingle singleDetails">
         <div class="totalValueSingleTarget">
           <p style={{ color: colorValue.lightBlue }}>{target}</p>

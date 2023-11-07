@@ -7,7 +7,7 @@ function SalesSection() {
         <div className="sales-section">
         <div className="saleSection-div-head"><div className='saleSection-div-head-icon'><MdOutlineLock/></div><div>SALES CHANNEL</div></div>
         {data.map((item,index)=>{
-            return <div className="saleSection-div">
+            return <div className="saleSection-div" key={index}>
             <div className="saleSection-div-icon"><MdOutlineLockOpen/></div>
             <div><p>Sales Channel {index+1}</p></div>
         </div>

@@ -1,4 +1,6 @@
-const data = [
+
+let data, dataName, targetData, productGroup,productGroup1;
+data = [
   {
     target: 14,
     act: 17,
@@ -101,7 +103,7 @@ const data = [
   },
 ];
 
-const dataName = {
+dataName = {
   target: "target",
   act: "act",
   growth: "growth%",
@@ -112,7 +114,7 @@ const dataName = {
   budgetPercent: "budgetPercent",
 };
 
-const targetData = [
+targetData = [
   {
     target: 120,
     growth: -12,
@@ -194,7 +196,7 @@ const targetData = [
     budgetChange: 0,
   },
 ];
-const productGroup = [
+productGroup = [
   { product: "Product Group A", productVal: 66.48 },
   { product: "Product Group B", productVal: 46.21 },
   { product: "Product Group C ", productVal: 66.48 },
@@ -206,7 +208,7 @@ const productGroup = [
   { product: "Product Group I", productVal: 66.48 },
   { product: "Product Group J ", productVal: 66.48 },
 ];
-const productGroup1 = [
+productGroup1 = [
   { product: "Product Group A", productVal: 50.48 },
   { product: "Product Group B", productVal: 50.48 },
   { product: "Product Group C ", productVal: 50.48 },
@@ -218,5 +220,4 @@ const productGroup1 = [
   { product: "Product Group I", productVal: 50.48 },
   { product: "Product Group J ", productVal: 50.48 },
 ];
-
 export { data, dataName, targetData, productGroup,productGroup1 };

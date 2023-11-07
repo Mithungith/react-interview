@@ -5,15 +5,11 @@ import SingleDetailsContainer from "./components/SingleDetailsContainer";
 import TotalValue from "./components/TotalValue";
 import TopHeader from "./components/TopHeader";
 import FooterContainer from "./components/FooterContainer";
-
+import DataApi from "./assets/DataApi";
 function App() {
   const year = [2020, 2021, 2022, 2023];
   return (
-    <div className="App">
-      {/* {data.map((item,index)=>{
-        return <SingleDetails key={index} data={item}/>
-      })} */}
-
+      <div className="App">
       <div class="first">
         <div class="second">
           <ProductGroup />
@@ -40,8 +36,10 @@ function App() {
         </div>
       </div>
       <FooterContainer/>
+      {/* <DataApi/> */}
     </div>
   );
 }
 
 export default App;
+// export {};

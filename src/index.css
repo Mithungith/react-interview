@@ -41,6 +41,9 @@ code {
   margin-bottom: 6px;
   /* height:500px; */
 }
+/* .singleDetails div{
+  width: 60px;
+} */
 .singleDetails p{
   font-size: 15px;
 }
@@ -211,6 +214,9 @@ code {
 }
 
 /*====================Total Value header=========================*/
+.opacitySingle{
+  opacity:.4;
+}
 .setTargetLastDivParent-width{
   height: 86px;
   margin-top: 1rem;
@@ -265,7 +271,14 @@ code {
 .totalValueSingle .singleDetailsBudget p{
   margin-right: 6px;
 }
-
+.singleDetailsBudget p span{
+  padding: 1px 4px;
+  border-radius: 7px;
+  background-color: #6d78872e;
+  font-size: 12px;
+  font-weight: 300;
+  margin-left: 4px;
+}
 .totalValueSingleTarget{
   background-color: #0c6ce9!important;
 }
@@ -316,6 +329,9 @@ code {
   font-size: 12px;
   color: #0c6ce9;
 }
+.productGroup-single-second p{
+  color:var(--lightBlueColor)
+}
 .search-div input{
   padding: 11px 7px;
   background-color: var(--backcomponent);
@@ -355,6 +371,7 @@ code {
   padding: 1rem 2rem;
   padding-bottom: 10px;
   cursor: pointer;
+  transition-duration: 400ms;
 }
 .productTabColor{
   border-bottom:2px solid #0c6ce9;
@@ -471,7 +488,7 @@ code {
   width: 36px;
   height: 20px;
   border-radius: 10px;
-  background-color: #6d7887;
+  background-color: #6e7277;
   position: relative;
   margin-left: 10px;
   top: 3px;
@@ -501,7 +518,9 @@ code {
   /* align-items: center; */
 }
 .advanceFilter span {
-    font-size: 14px;
+  font-size: 14px;
+  position: relative;
+  top: 1px;
 }
 .advanceFilter span:first-child {
     vertical-align: middle!important;
@@ -535,13 +554,13 @@ code {
   vertical-align: middle;
   color: var(--primaryTextColor);
   position: relative;
-  top: 4px;
+  top: 2px;
 }
 .compareYears span:nth-child(3) {
   background-color: #6d78872e;
-  padding: 4px 8px;
-  border-radius: 6px;
-  color:var(--lightBlueColor);
+  padding: 5px 8px;
+  border-radius: 11px;
+  color: var(--lightBlueColor);
 }
 .compareYears span:nth-child(3) svg{
   margin-left: 5px;
@@ -551,14 +570,83 @@ code {
 .compareYears span:nth-child(5) {
   background-color: #6d78872e;
   padding: 4px 8px;
-  border-radius: 6px;
-  color:var(--lightBlueColor);
+  border-radius: 10px;
+  color: var(--lightBlueColor);
+  padding: 5px 8px;
 }
 .compareYears span:nth-child(5) svg{
   margin-left: 5px;
   font-size: 10px;
-  color: #fff;
+  color:var(--primaryTextColor);
 }
+/* .FilterModal-div {
+  position: relative;
+  top: 18%;
+}
+.FilterModal {
+  position: absolute;
+  top: 10%;
+  width: 147px;
+  height: 110px;
+  background-color: #2a2a2b;
+  font-size: 14px;
+  z-index: 100;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+.FilterModal ul{
+  list-style: none;
+}
+.lastDateFilter {
+  background-color: #6d78872e;
+  padding: 0px 7px;
+  border-radius: 11px;
+  color: var(--lightBlueColor);
+  padding: 6px 11px;
+}
+.toggleFilter svg{
+  position: relative;
+  top: 2px;
+  margin-left: 7px;
+}
+.FilterModal ul li {
+  margin: 5px 0;
+  vertical-align: super;
+  display: flex;
+  transition-duration: 300ms;
+  padding: 5px 0;
+}
+.FilterModal ul li:hover{
+  background-color: #323941;
+}
+.yearToggle{
+  position: relative;
+  top: -6px!important;
+}
+.yearfilterModal-div{
+  position: relative;
+}
+.yearfilterModal {
+  position: absolute;
+  top: 10%;
+  width: 100px;
+  height: 140px;
+  background-color: #2a2a2b;
+  font-size: 14px;
+  z-index: 100;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+.invisible{
+  transform: scale(0);
+}
+.colorWhite{
+  display: inline-block;
+  width:15px;
+  height:15px;
+  border-radius: 3px;
+  background-color: #fff;
+} */
 /*------------------------TopHead end--------------------------*/
 /*------------------------Footer Container start--------------------------*/
 .footer {
