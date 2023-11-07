@@ -52,9 +52,9 @@ function TopHeader() {
           <div className="compareYears">
             <span><MdOutlineFilterAlt/></span>
             <span>Compare Years :</span>
-            <span>2020</span>
+            <span>2020 <LiaAngleDownSolid/></span>
             <span>to</span>
-            <span>2024</span>
+            <span>2024 <LiaAngleDownSolid/></span>
           </div>
         </div>
       </div>

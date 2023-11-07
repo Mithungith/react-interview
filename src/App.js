@@ -4,6 +4,7 @@ import ProductGroup from "./components/ProductGroup";
 import SingleDetailsContainer from "./components/SingleDetailsContainer";
 import TotalValue from "./components/TotalValue";
 import TopHeader from "./components/TopHeader";
+import FooterContainer from "./components/FooterContainer";
 
 function App() {
   const year = [2020, 2021, 2022, 2023];
@@ -38,6 +39,7 @@ function App() {
           </div>
         </div>
       </div>
+      <FooterContainer/>
     </div>
   );
 }
