@@ -1,9 +1,8 @@
-import React,{useEffect,useState,} from "react";
+import React, { useEffect, useState } from "react";
 import "../index.css";
 function SingleDetails({ data }) {
   const { target, act, growth, gap, margin, dist, budget, budgetPercent } =
     data;
-  // const {id} = apiData[0];
   const color = {
     negative: "#f59994",
     positive: "#12d965",
@@ -33,9 +32,7 @@ function SingleDetails({ data }) {
         <div>
           <p
             style={
-              growth > 0
-                ? { color: color.positive }
-                : { color: color.negative }
+              growth > 0 ? { color: color.positive } : { color: color.negative }
             }
           >
             {gap}%

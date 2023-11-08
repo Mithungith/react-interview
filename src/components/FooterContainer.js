@@ -1,5 +1,10 @@
 import React from "react";
-import { TbArrowBadgeRightFilled,TbArrowBadgeRight,TbBadge,TbLetterB } from "react-icons/tb";
+import {
+  TbArrowBadgeRightFilled,
+  TbArrowBadgeRight,
+  TbBadge,
+  TbLetterB,
+} from "react-icons/tb";
 import { PiBracketsAngleThin } from "react-icons/pi";
 function FooterContainer() {
   return (
@@ -26,7 +31,7 @@ function FooterContainer() {
           </div>
           <div>
             <p class="footlogo4">
-              <TbLetterB/>
+              <TbLetterB />
             </p>
             <p>Parent-Brand</p>
           </div>
@@ -36,21 +41,32 @@ function FooterContainer() {
             </p>
             <p>Sub-Brand</p>
           </div>
-         
         </div>
         <div className="footer-right">
+          <div>
             <div>
-                <div><p>Target</p><p>240</p></div>
+              <p>Target</p>
+              <p>240</p>
             </div>
+          </div>
+          <div>
             <div>
-                <div><p>Margin</p><p>23%</p></div>
+              <p>Margin</p>
+              <p>23%</p>
             </div>
+          </div>
+          <div>
             <div>
-                <div><p>Cost.</p><p>54%</p></div>
+              <p>Cost.</p>
+              <p>54%</p>
             </div>
+          </div>
+          <div>
             <div>
-                <div><p>Budget</p><p>34%</p></div>
+              <p>Budget</p>
+              <p>34%</p>
             </div>
+          </div>
         </div>
       </div>
     </div>

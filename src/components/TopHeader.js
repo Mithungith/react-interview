@@ -4,13 +4,13 @@ import { LiaAngleDownSolid } from "react-icons/lia";
 import { BsFilter } from "react-icons/bs";
 import { MdOutlineFilterAlt } from "react-icons/md";
 function TopHeader() {
-  const [visibleModel,setVisibleModel] = useState(false);
-  const [visibleModelYear,setVisibleModelYear] = useState(false);
-  function visibleModelFunc(){
-    setVisibleModel(prev=>!prev)
+  const [visibleModel, setVisibleModel] = useState(false);
+  const [visibleModelYear, setVisibleModelYear] = useState(false);
+  function visibleModelFunc() {
+    setVisibleModel((prev) => !prev);
   }
-  function toggleYearFilter(){
-    setVisibleModelYear(prev=>!prev);
+  function toggleYearFilter() {
+    setVisibleModelYear((prev) => !prev);
   }
   return (
     <div className="topheader">
@@ -53,34 +53,26 @@ function TopHeader() {
             <span className="togglePage"></span>
           </div>
           <div className="advanceFilter">
-            <span><BsFilter/></span>
+            <span>
+              <BsFilter />
+            </span>
             <span>Advance Filter :</span>
-            <span onClick={visibleModelFunc} class="toggleFilter"><LiaAngleDownSolid/></span>
-            {/* <div class={visibleModel?"FilterModal-div":"invisible"}>
-              <div className="FilterModal">
-                <ul>
-                  <li><span className="colorWhite"></span> Margin</li>
-                  <li><span className="colorWhite"></span> Distribution</li>
-                  <li><span className="colorWhite"></span> Budget</li>
-                </ul>
-              </div>
-            </div> */}
+            <span onClick={visibleModelFunc} class="toggleFilter">
+              <LiaAngleDownSolid />
+            </span>
           </div>
           <div className="compareYears">
-            <span><MdOutlineFilterAlt/></span>
+            <span>
+              <MdOutlineFilterAlt />
+            </span>
             <span>Compare Years :</span>
-            <span>2020 <LiaAngleDownSolid/></span>
-            {/* <div class={visibleModelYear?"yearfilterModal-div":"invisible"}>
-              <div className="yearfilterModal">
-                <ul>
-                  <li>Margin</li>
-                  <li>Distribution</li>
-                  <li>Budget</li>
-                </ul>
-              </div>
-            </div> */}
+            <span>
+              2020 <LiaAngleDownSolid />
+            </span>
             <span>to</span>
-            <span className="lastDateFilter">2024 <LiaAngleDownSolid/></span>
+            <span className="lastDateFilter">
+              2024 <LiaAngleDownSolid />
+            </span>
           </div>
         </div>
       </div>

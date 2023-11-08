@@ -1,13 +1,12 @@
-import React,{useEffect,useState} from 'react';
-import {BsArrowDownUp} from "react-icons/bs";
-import SingleDetails from './SingleDetails.js';
-//  
-import DetailsHeading from './DetailsHeading.js';
+import React, { useEffect, useState } from "react";
+import SingleDetails from "./SingleDetails.js";
+import DetailsHeading from "./DetailsHeading.js";
 
-function SingleDetailsContainer({yearCount}) {
-  const [apiData,setApiData] = useState([]);
+function SingleDetailsContainer({ yearCount }) {
+  const diff = yearCount - 2020;
+  const [apiData, setApiData] = useState([]);
   useEffect(() => {
-    fetch("https://dummyjson.com/products")
+    fetch(`https://dummyjson.com/products?skip=${diff * 10}&limit=10`)
       .then((data) => {
         return data.json();
       })
@@ -16,31 +15,28 @@ function SingleDetailsContainer({yearCount}) {
         setApiData(data.products);
       });
   }, []);
-//   const val2 = apiData;  
-  if(Array.isArray(apiData)){
-    var val3 = apiData.map((item,index)=>{
-        return {
-            target: item.stock,
-            act: item.price,
-            growth:item.discountPercentage,
-            gap:item.rating,
-            margin: item.rating,
-            dist: item.stock,
-            budget: item.price,
-            budgetPercent: item.stock,
-          }
-      })
-      var val4 = val3.slice(0,10);
+  if (Array.isArray(apiData)) {
+    var val3 = apiData.map((item, index) => {
+      return {
+        target: item.stock,
+        act: item.price,
+        growth: item.discountPercentage,
+        gap: item.rating,
+        margin: item.rating,
+        dist: item.stock,
+        budget: item.price,
+        budgetPercent: item.stock,
+      };
+    });
   }
   return (
     <div>
-    {/* <div className="singleDetails-header-year"><span>2020</span><BsArrowDownUp/></div> */}
-    <DetailsHeading yearCount={yearCount}/>
-      {val4.map((item,index)=>{
-        return <SingleDetails key={index} data={item}/>
+      <DetailsHeading yearCount={yearCount} />
+      {val3.map((item, index) => {
+        return <SingleDetails key={index} data={item} />;
       })}
     </div>
-  )
+  );
 }
 
 export default SingleDetailsContainer;
