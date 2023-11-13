@@ -28,7 +28,7 @@ function DetailsHeading({ yearCount }) {
         </div>
         <div className="singleDetailsBudget">
           <p>
-            budget <span className="budjectPercent">%</span>
+            budget%
           </p>
         </div>
       </div>

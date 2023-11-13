@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import ProductGroupList from "./ProductGroupList";
 import ProductGroupHeader from "./ProductGroupHeader";
-function ProductGroup() {
+function ProductGroup({scrollWidth}) {
   const [tabChange, setTabCange] = useState(true);
   const [collapseBar, setCollapseBar] = useState(true);
   const [apiDataNew, setApiDataNew] = useState([]);
@@ -38,7 +38,7 @@ function ProductGroup() {
     >
       <div className="productGroupHeader-height">
         <div class="productArrow" onClick={handleCollapse}>
-          <span>{collapseBar ? <BsArrowLeft /> : <BsArrowRight />}</span>
+          <span onClick={scrollWidth}>{collapseBar ? <BsArrowLeft /> : <BsArrowRight />}</span>
         </div>
         <ProductGroupHeader />
       </div>

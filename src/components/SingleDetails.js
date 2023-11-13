@@ -48,7 +48,7 @@ function SingleDetails({ data }) {
           <p style={{ color: color.white }}>
             {budget}{" "}
             <span style={{ color: color.white }} className="budjectPercent">
-              {budgetPercent}%
+              {String(budgetPercent ).length>2?String(budgetPercent ).slice(0,-1):String(budgetPercent )}%
             </span>
           </p>
         </div>

@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import { LiaAngleDownSolid } from "react-icons/lia";
-import { BsFilter } from "react-icons/bs";
+import { BsFilter,BsCheck2 } from "react-icons/bs";
 import { MdOutlineFilterAlt } from "react-icons/md";
 function TopHeader() {
-  const [visibleModel, setVisibleModel] = useState(false);
+  const [visibleModelFilter, setVisibleModelFilter] = useState(false);
   const [visibleModelYear, setVisibleModelYear] = useState(false);
+  const [toggleBtn, setToggleBtn] = useState(false);
   function visibleModelFunc() {
-    setVisibleModel((prev) => !prev);
+    setVisibleModelFilter((prev) => !prev);
   }
   function toggleYearFilter() {
     setVisibleModelYear((prev) => !prev);
+  }
+  function handleToggle(){
+    setToggleBtn((prev)=>!prev);
   }
   return (
     <div className="topheader">
@@ -50,7 +54,7 @@ function TopHeader() {
         <div className="topheader2b">
           <div className="topheader2b-toggle">
             <p>Quater</p>
-            <span className="togglePage"></span>
+            <span onClick={handleToggle} className={toggleBtn?"togglePage1":"togglePage"}></span> {/*"togglePage togglePage1" */}
           </div>
           <div className="advanceFilter">
             <span>
@@ -60,19 +64,38 @@ function TopHeader() {
             <span onClick={visibleModelFunc} class="toggleFilter">
               <LiaAngleDownSolid />
             </span>
+            <div className={visibleModelFilter?"advance-filterModel":"advance-filterModel filterHideShow"}>
+            <ul>
+              <li><span className="squareWhite"></span><span>Margin</span></li>
+              <li><span className="squareWhite"></span><span>Distribution</span></li>
+              <li><span className="squareWhite"></span><span>Budget</span></li>
+            </ul>
           </div>
+          </div>
+          {/*=================================== */}
+          
+          {/*=================================== */}
           <div className="compareYears">
             <span>
               <MdOutlineFilterAlt />
             </span>
             <span>Compare Years :</span>
-            <span>
-              2020 <LiaAngleDownSolid />
-            </span>
+            <span  onClick={toggleYearFilter} class="dateFilterArrow"> 2020<LiaAngleDownSolid /></span>
             <span>to</span>
             <span className="lastDateFilter">
               2024 <LiaAngleDownSolid />
             </span>
+            <div className={!visibleModelYear?"filterYear hideYear":"filterYear"}>
+              <ul>
+                <li>2023 <span className="showHover"><BsCheck2/></span></li>
+                <li>2022 <span className="showHover"><BsCheck2/></span></li>
+                <li>2021 <span className="showHover"><BsCheck2/></span></li>
+                <li>2020 <span className="showHover"><BsCheck2/></span></li>
+                <li>2019 <span className="showHover"><BsCheck2/></span></li>
+                <li>2028 <span className="showHover"><BsCheck2/></span></li>
+                <li>2027 <span className="showHover"><BsCheck2/></span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
